@@ -1,0 +1,174 @@
+body {
+    background-image: url(/assets/images/back_shift.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;    
+    width: 100vw;
+    height: 100vh;
+    display: table-cell;
+    vertical-align: middle;
+}
+body img {
+    display: block;
+    margin: none;
+    width: 100%;
+    height: 1.9rem;
+}
+
+.box {
+    width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.box .form-control:focus,
+.box .form-control:active {
+    outline: none;
+    box-shadow: none;
+}
+.box .box-shift {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #d6d6d6;
+    width: 100%;
+    height: 100%;
+}
+.box .box-shift .header {
+    background-color: #00547D;
+    border-radius: 8px 8px 8px 8px;
+    height: 22%;
+    padding: 10%;
+}
+.box .box-shift .header a img {
+    display: block;
+    margin: 0 auto;
+    width: 10%;
+}
+.box .inside {
+    padding: 3%;
+    text-align: center;
+}
+.box .header {
+    background-color: #00547D;
+    border-radius: 8px 8px 8px 8px;
+    padding: 18px;
+}
+.box .header a img {
+    display: block;
+    margin: 0px auto;
+    width: 30%;
+}
+.box .footer {
+    text-align: center; 
+}
+.box .footer a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1em;
+    transition:all .1s ease-in-out;
+    transform: scale(1.05); 
+}
+.box .footer a:hover {
+    font-weight: bold;
+    transition:all .1s ease-in-out;
+    transform: scale(0.98);
+
+}
+.box .footer a:last-child {
+    margin-left: 24px;
+}
+.box_shift {
+    left: calc(50% - 200px);
+    top: calc(50% - 323px);
+}
+
+/*  LITTLE CSS  START */
+.mtop16 {
+    margin-top: 16px;
+}
+.mtop18 {
+    margin-top: 18px;
+}
+.mtop20 {
+    margin-top: 20px;
+}
+.mtop22 {
+    margin-top: 22px;
+}
+.mtop24 {
+    margin-top: 24px;
+}
+
+.mbottom16 {
+    margin-top: 16px;
+}
+.mbottom18 {
+    margin-top: 18px;
+}
+.mbottom20 {
+    margin-top: 20px;
+}
+.mbottom22 {
+    margin-top: 22px;
+}
+.mbottom24 {
+    margin-top: 24px;
+}
+
+
+.text-inside {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+/*  LITTLE CSS  FINISH */
+
+
+/*  LITTLE CSS BUTTON START  */
+.box .btn-success-bta {
+    background-color: #101010;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 1.2rem !important;
+    color: #959595 !important;
+    transition:all .1s ease-in-out;
+    transform: scale(1);
+}
+.btn-success-bta:hover {
+    background-color: #090909;
+    font-size: 1.21rem !important;
+    color: #D8D8D8 !important;
+    font-weight: bold; 
+    transition:all .1s ease-in-out;
+}
+.btn-success-bta:active {
+    background-color: #090909;
+    font-size: 1.22rem !important;
+    color: #FFFFFF !important;
+    font-weight: bold;
+    transition:all .1s ease-in-out;
+    transform: scale(0.98);
+    box-shadow: 0 0.3rem 0.4rem rgba(0,0,0,0.65);
+}
+/*  LITTLE CSS BUTTON FINISH  */
+
+
+/* BORDER */
+.border-all-14 {
+    border-radius: 14px 14px 14px 14px;
+}
+.border-all-12 {
+    border-radius: 12px 12px 12px 12px;
+}
+.border-all-10 {
+    border-radius: 10px 10px 10px 10px;
+}
+.border-all-8 {
+    border-radius: 8px 8px 8px 8px;
+}
+.border-all-6 {
+    border-radius: 6px 6px 6px 6px;
+}

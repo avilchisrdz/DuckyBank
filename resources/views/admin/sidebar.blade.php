@@ -2,11 +2,11 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{ url('/admin') }}" class="brand-link s-main-nav">
-      <img src="{{asset('assets/img/brazeway-160x160.png')}}"
-           alt="Brazeway Logo"
+      <img src="{{asset('assets/images/DuckyBankLogo.png')}}"
+           alt="DuckyBankLogoLogo"
            class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">Brazeway Cienega</span>
+      <span class="brand-text font-weight-light">DuckyBank</span>
     </a>
 
     <!-- Sidebar -->
@@ -14,10 +14,10 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 d-flex">
         <div class="image">
-          <img src="{{asset('assets/img/me-180x180.png')}}" class="img-circle elevation-2" alt="User Image">
+          <img src="{{asset('assets/images/me-180x180.png')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <p href="#" class="d-block info-stl">{{ Auth::user()->email }}</p>
+          <p href="#" class="d-block info-stl">{{ Auth::user()->name }} {{ Auth::user()->lastname }} </p>
         </div>
       </div>
 

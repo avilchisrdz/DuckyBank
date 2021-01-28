@@ -2,7 +2,7 @@
 
 @section('breadcrumb')
 	<li class="breadcrumb-item">
-	  <a href="{{ url('/admin/configurations/users') }}"><i class="far fa-folder-open"></i> User Edit</a>
+	  <a href="{{ url('/admin/roles') }}"><i class="far fa-folder-open"></i> Roles</a>
 	</li>
 @endsection	
 

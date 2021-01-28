@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ProcedureController;
+namespace App\Http\Controllers\Admin\ProcedureControllers;
 
 use Illuminate\Http\Request;
 

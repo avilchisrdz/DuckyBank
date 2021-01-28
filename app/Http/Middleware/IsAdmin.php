@@ -2,7 +2,7 @@
 
 namespace App\Http\Middleware;
 
-use Clouse, Auth;
+use Closure, Auth;
 
 class IsAdmin
 {
@@ -15,7 +15,7 @@ class IsAdmin
      */
     public function handle($request, Closure $next)
     {
-        if( Auth::user()->role == '1' ):
+        if( Auth::user()->role_id == '1' ):
             return $next($request);
         else:
             return redirect('/shifts');

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Cashier;
+namespace App\Http\Models\Cashier;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

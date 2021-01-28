@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Shift;
+namespace App\Http\Models\Shift;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

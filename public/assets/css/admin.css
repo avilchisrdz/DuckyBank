@@ -7,14 +7,15 @@
 .info-stl {
 	border-left: 2px solid black;
 	border-right: 2px solid black;
-	border-radius: 4px;
+	border-radius: 5px;
 	background-color: #FFFFFF !important;
 	box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.5);
 	color: #000000 !important;
-	font-size: 0.86rem;
+	font-size: 0.6rem;
 	font-weight: bold;
 	white-space: nowrap;
-	text-decoration: none;	
+	text-decoration: none;
+	padding: 0.4rem;	
 }
 .info-stl:hover {
 	box-shadow: 0 0.1rem 0.35rem rgba(0,0,0,0.5);

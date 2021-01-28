@@ -17,7 +17,7 @@ class CreateShiftsTable extends Migration
             $table->engine = 'InnoDB';          
             $table->bigIncrements('id')->unsigned(); //PRIMARY KEY
 
-            $table->string('description'); //A001 ,A002
+            $table->string('description')->unique(); //A001 ,A002
 
             $table->bigInteger('procedure_id')->unsigned();                 //FOREIGN KEY
             // ADDING FOREIGN KEY

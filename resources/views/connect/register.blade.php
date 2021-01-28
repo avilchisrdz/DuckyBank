@@ -7,7 +7,7 @@
 <div class="box box_register shadow">
 	<div class='header'>
 		<a href="{{ url('/login') }}">
-			<img src="{{asset('assets/img/DuckyBankLogo.png')}}">
+			<img src="{{asset('assets/images/DuckyBankLogo.png')}}">
 		</a>
 	</div>
 	<div class="inside">
