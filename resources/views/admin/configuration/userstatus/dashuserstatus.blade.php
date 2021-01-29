@@ -2,7 +2,7 @@
 
 @section('breadcrumb')
 	<li class="breadcrumb-item">
-	  <a href="{{ url('/admin/userstatus') }}"><i class="far fa-folder-open"></i> Estado de Usuario</a>
+	  <a href="{{ url('/admin/userstatuses') }}"><i class="far fa-folder-open"></i> Estado de Usuario</a>
 	</li>
 @endsection	
 

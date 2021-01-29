@@ -70,7 +70,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ url('/admin/cashierstatus/1') }}" class="nav-link s-item-submenu text-transform-x">
+                <a href="{{ url('/admin/cashierstatuses/1') }}" class="nav-link s-item-submenu text-transform-x">
                   <i class="fas fa-user-friends"></i>
                   <p>Estados de Cajeros</p>
                 </a>

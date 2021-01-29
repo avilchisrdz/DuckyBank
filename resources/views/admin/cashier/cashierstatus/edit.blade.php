@@ -2,7 +2,7 @@
 
 @section('breadcrumb')
 	<li class="breadcrumb-item">
-	  <a href="{{ url('/admin/cashierstatus') }}"><i class="far fa-folder-open"></i> Editar Cajeros</a>
+	  <a href="{{ url('/admin/cashiertatuses') }}"><i class="far fa-folder-open"></i> Editar cajero</a>
 	</li>
 @endsection	
 
@@ -11,19 +11,20 @@
 <div class="container-fluid">
 <div class="row">
 	<section class="col-md-4 connectedSortable ui-sortable">
+		<div style=""></div>
 		<div class="box card shadow footer-line">
-			<div class="card-header">Editar cajero</div>
+			<div class="card-header">Editar Estado</div>
 			<div class="card-body">
 				<div class="inside">
-					{!! Form::open(['url' => '/admin/cashierstatus/'.$cashierStatusCatch->id.'/edit']) !!}				
-					<label for="description">Ingresa cajero:</label>
+					{!! Form::open(['url' => '/admin/cashierstatus/'.$cashierStatusCatch->id.'/edit']) !!}		
+					<label for="description">Ingresa Estado de Cajero:</label>
 						<div class="input-group">
 						    <div class="input-group-prepend">
 							    <span class="input-group-text" id="basic-addon1">
 							    	<i class="far fa-keyboard"></i>
 							    </span>
 						    </div>
-							{!! Form::text('description', $cashierStatusCatch->description, array('class ' => 'form-control text-inside', 'placeholder' => 'Cajero')) !!}
+							{!! Form::text('description', $cashierStatusCatch->description, array('class ' => 'form-control text-inside', 'placeholder' => 'Estado')) !!}
 						</div>																						
 					{{ Form::submit('Guardar', [ 'class' => 'btn-success-btb border-all-10 mtop16' ]) }}					
 					{!! Form::close() !!}
@@ -31,13 +32,12 @@
 			</div>
 			<div class="card-footer">FOOTER</div>
 		</div>
-		<a class="shadow btn-success-btb border-all-10 d-flex" style="text-align: center;" href="/admin/cashierstatuses/1">Agregar Trámite</a>
 	</section>
 	
 	<section class="col-md-8 connectedSortable ui-sortable">
 		<div class="box card shadow footer-line">
 			<div class="card-body">
-				<div class="shadow border-all-10" style="font-weight: bold; text-align: center; background-color: #4A96FF">Trámites</div>
+				<div class="shadow border-all-10" style="font-weight: bold; text-align: center; background-color: #4A96FF">Estado de Cajero</div>
 				<div class="inside">
 					<nav class="nav nav-pills nav-fill">
 					</nav>
@@ -52,28 +52,27 @@
 								</tr>
 							</thead>
 							<tbody>
-								@foreach($cashierStatusesCatch as $cashierStatus)
+								@foreach($cashierStatusesCatch as $cashierstatus)
 								<tr>
-									<td>{{ $cashierStatus->id }}</td>
-									<td>{{ $cashierStatus->description }}</td>
-									<td >{{ $cashierStatus->created_at }}</td>
+									<td>{{ $cashierstatus->id }}</td>
+									<td>{{ $cashierstatus->description }}</td>
+									<td >{{ $cashierstatus->created_at }}</td>
 									<td>
 										<div class="the-options">
-											<a href="{{ url('/admin/cashierstatus/'.$cashierStatus->id.'/edit') }}" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fas fa-edit"></i>
+											<a href="{{ url('/admin/cashierstatus/'.$cashierstatus->id.'/edit') }}" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fas fa-edit"></i>
 											</a>
-											<a href="{{ url('/admin/cashierstatus/'.$cashierStatus->id.'/delete') }}" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fas fa-trash-alt"></i>
+											<a href="{{ url('/admin/cashierstatus/'.$cashierstatus->id.'/delete') }}" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fas fa-trash-alt"></i>
 											</a>								
 										</div>
 									</td>
 								</tr>
 								@endforeach
 							</tbody>
-						</table>						
+						</table>							
 					</div>				
 				</div>
 
 			</div>
-			<div class="card-footer">FOOTER</div>	
 		</div>
 	</section>	
 </div>	

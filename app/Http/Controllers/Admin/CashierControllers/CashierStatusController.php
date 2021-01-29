@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin\CashierControllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Http\Models\Cashier\CashierStatus;;
+use App\Http\Models\Cashier\CashierStatus;
 
 use Validator, Str;
 
@@ -29,7 +29,7 @@ class CashierStatusController extends Controller
 
         $validator = Validator::make($request->all(), $rules, $messages);
         if( $validator->fails() ): 
-            return back()->withErrors($validator)->with('message', 'Error al agregar un cajero. Por favor verifique lo siguiente: ')->with('typealert','danger');
+            return back()->withErrors($validator)->with('message', 'Error al agregar un estado. Por favor verifique lo siguiente: ')->with('typealert','danger');
         else:
         	$cashierstatus = new CashierStatus;
         	$cashierstatus->description = e($request->input('description'));

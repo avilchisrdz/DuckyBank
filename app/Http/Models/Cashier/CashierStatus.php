@@ -10,7 +10,7 @@ class CashierStatus extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-    protected $table = 'cashier_status';
+    protected $table = 'cashier_statuses';
     protected $hidden = ['created_at', 'updated_at'];
 
     public function cashier(){

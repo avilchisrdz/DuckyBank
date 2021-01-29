@@ -5,6 +5,15 @@ use Illuminate\Support\Facades\Route;
 
 //Shifts
 Route::get('/shifts', 'ShiftControllers\ShiftController@getShift')->name('shift');	
+Route::post('/shifts', 'ShiftControllers\ShiftController@postShiftAdd')->name('shift');	
+
+Route::get('/shiftsshow', function () {
+    return view('shift.shiftsshow');
+});
+
+
+//ShiftsHistories
+Route::get('/shiftshistories', 'ShiftControllers\ShiftHistoryController@getShiftHistories')->name('shifthistory');	
 
 Route::get('/recover', function () {
     return view('recover.recover');
