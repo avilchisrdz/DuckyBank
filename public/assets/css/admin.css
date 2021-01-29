@@ -330,3 +330,22 @@
 }
 
 /* CARD CSS FINISH */
+
+
+
+
+/*TABLES CSS*/
+.table-titles {
+	font-weight: bold;
+}
+
+/*TABLE CSS FINISH*/
+
+/*FOOTER LINE CSS*/
+.footer-line {
+	background-color: #FFFFFF;
+	border-radius: 6px;
+	border-bottom: 3px solid #0D73FF;
+	width: 100%;
+}
+/*FOOTER LINES CSS FINISH*/

@@ -2,7 +2,7 @@
 
 @section('breadcrumb')
 	<li class="breadcrumb-item">
-	  <a href="{{ url('/admin/procedures') }}"><i class="far fa-folder-open"></i> Editar trámites</a>
+	  <a href="{{ url('/admin/procedures') }}"><i class="far fa-folder-open"></i> Trámites</a>
 	</li>
 @endsection	
 
@@ -11,11 +11,12 @@
 <div class="container-fluid">
 <div class="row">
 	<section class="col-md-4 connectedSortable ui-sortable">
+		<div style=""></div>
 		<div class="box card shadow footer-line">
-			<div class="card-header">Editar trámite</div>
+			<div class="card-header">Agregar trámite</div>
 			<div class="card-body">
 				<div class="inside">
-					{!! Form::open(['url' => '/admin/procedure/'.$procedureCatch->id.'/edit']) !!}				
+					{!! Form::open(['url' => '/admin/procedure/add']) !!}
 					<label for="description">Ingresa trámite:</label>
 						<div class="input-group">
 						    <div class="input-group-prepend">
@@ -23,15 +24,14 @@
 							    	<i class="far fa-keyboard"></i>
 							    </span>
 						    </div>
-							{!! Form::text('description', $procedureCatch->description, array('class ' => 'form-control text-inside', 'placeholder' => 'Trámite')) !!}
+							{!! Form::text('description', null, array('class ' => 'form-control text-inside', 'placeholder' => 'Trámite')) !!}
 						</div>																						
-					{{ Form::submit('Guardar', [ 'class' => 'btn-success-btb border-all-10 mtop16' ]) }}					
+					{{ Form::submit('Agregar', [ 'class' => 'btn-success-btb border-all-10 mtop16' ]) }}					
 
 				</div>			
 			</div>
 			<div class="card-footer">FOOTER</div>
 		</div>
-		<a class="shadow btn-success-btb border-all-10 d-flex" style="text-align: center;" href="/admin/procedures/1">Agregar Trámite</a>
 	</section>
 	
 	<section class="col-md-8 connectedSortable ui-sortable">
@@ -73,7 +73,6 @@
 				</div>
 
 			</div>
-			<div class="card-footer">FOOTER</div>	
 		</div>
 	</section>	
 </div>	

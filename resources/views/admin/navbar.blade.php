@@ -34,7 +34,7 @@
           <i class="fas fa-users"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right text-center nav-menu-color">
-          <a class="dropdown-item nav-ddown-item" href="#"><img src="{{asset('assets/img/userIcon.png')}}" alt="User Avatar" class="img-size-50 mr-3 img-circle"></a>
+          <a class="dropdown-item nav-ddown-item" href="#"><img src="{{asset('assets/images/userIcon.png')}}" alt="User Avatar" class="img-size-50 mr-3 img-circle"></a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item nav-ddown-item">
             <i class="fas fa-circle"></i> Online

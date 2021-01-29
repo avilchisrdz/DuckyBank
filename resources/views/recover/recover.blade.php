@@ -20,7 +20,6 @@
 		  {!! Form::email('email', null, array('class ' => 'form-control text-inside', 'required' , 'placeholder' => 'Ingresa tu e-mail asociado')) !!}
 		</div>
 
-
 			{!! Form::submit('Solicitar', ['class' => 'btn-success-bta border-all-10 mtop16'])!!}
 			{!! Form::close() !!}	
 
@@ -36,8 +35,6 @@
 						</ul>
 						@endif
 						<script> 
-							//$('.alert').slideDown(); 
-							//setTimeout( function(){ $('.alert').slideUp();}, 5000);
 							$('.alert').slideDown(1000); 
 							window.setTimeout(function() { $(".alert").slideUp(1000); }, 5000);	
 						</script>
