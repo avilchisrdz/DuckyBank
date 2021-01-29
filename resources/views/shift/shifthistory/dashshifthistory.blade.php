@@ -23,15 +23,15 @@
 						<table class="table mtop16">
 							<thead class="table table-sm">
 								<tr>
-									<td class="table-titles" width="600">Turno</td>
-									<td class="table-titles" >Fecha</td>
+									<td class="table-titles" style="font-size: 2rem; text-align: center;" width="600">Turno</td>
+									<td class="table-titles" style="font-size: 2rem; text-align: center;" >Fecha</td>
 								</tr>
 							</thead>
 							<tbody>
 								@foreach($shiftHistoriesCatch as $shifthistory)
 								<tr>
-									<td class="shadow" style="font-size: 1.5rem; font-weight: bold">{{ $shifthistory->description }}</td>
-									<td >{{ $shifthistory->created_at }}</td>
+									<td class="shadow" style="font-size: 1.9rem; font-weight: bold; text-align: center;">{{ $shifthistory->description }}</td>
+									<td style="font-size: 1.9rem; font-weight: bold; text-align: center;">{{ $shifthistory->created_at }}</td>
 								</tr>
 								@endforeach
 							</tbody>
