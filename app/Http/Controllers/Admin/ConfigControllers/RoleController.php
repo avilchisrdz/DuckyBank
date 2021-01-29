@@ -15,7 +15,7 @@ class RoleController extends Controller
     	$this->middleware('isadmin');
     }
     public function getRoles($id){
-    	$rolesCatch = Role::orderBy('created_at','Desc')->get();
+    	$rolesCatch = Role::orderBy('created_at','Asc')->get();
     	$data = ['rolesCatch' => $rolesCatch];
     	return view('admin.role.dashrole', $data);
     }
@@ -44,7 +44,7 @@ class RoleController extends Controller
 
     public function getRoleEdit($id){
         //GetAllData
-            $rolesCatch = Role::orderBy('created_at','Desc')->get();
+            $rolesCatch = Role::orderBy('created_at','Asc')->get();
             $dataTwo = ['rolesCatch' => $rolesCatch];                  
         //
 

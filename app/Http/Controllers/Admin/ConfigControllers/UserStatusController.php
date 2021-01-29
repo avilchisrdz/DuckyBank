@@ -15,7 +15,7 @@ class UserStatusController extends Controller
     	$this->middleware('isadmin');
     }
     public function getUserStatuses($id){
-    	$userStatusesCatch = UserStatus::orderBy('created_at','Desc')->get();
+    	$userStatusesCatch = UserStatus::orderBy('created_at','Asc')->get();
     	$data = ['userStatusesCatch' => $userStatusesCatch];
     	return view('admin.configuration.userstatus.dashuserstatus', $data);
     }
@@ -44,7 +44,7 @@ class UserStatusController extends Controller
 
     public function getUserStatusEdit($id){
         //GetAllData
-            $userStatusesCatch = UserStatus::orderBy('created_at','Desc')->get();
+            $userStatusesCatch = UserStatus::orderBy('created_at','Asc')->get();
             $dataTwo = ['userStatusesCatch' => $userStatusesCatch];                  
         //
 

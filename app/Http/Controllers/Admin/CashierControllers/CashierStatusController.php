@@ -15,7 +15,7 @@ class CashierStatusController extends Controller
     	$this->middleware('isadmin');
     }
     public function getCashierStatuses($id){
-    	$cashierStatusesCatch = CashierStatus::orderBy('created_at','Desc')->get();
+    	$cashierStatusesCatch = CashierStatus::orderBy('created_at','Asc')->get();
     	$data = ['cashierStatusesCatch' => $cashierStatusesCatch];
     	return view('admin.cashier.cashierstatus.dashcashierstatus', $data);
     }
@@ -44,7 +44,7 @@ class CashierStatusController extends Controller
 
     public function getCashierStatusEdit($id){
         //GetAllData
-            $cashierStatusesCatch = CashierStatus::orderBy('created_at','Desc')->get();
+            $cashierStatusesCatch = CashierStatus::orderBy('created_at','Asc')->get();
             $dataTwo = ['cashierStatusesCatch' => $cashierStatusesCatch];                  
         //
 

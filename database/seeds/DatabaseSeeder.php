@@ -42,6 +42,8 @@ class DatabaseSeeder extends Seeder
             'email' => 'ingeli@gmail.com',
             'password' => '$2y$10$EmsI4g.ZA6dbMYqiSCLDuezahaeiH7IxZ05uLZdLoo8D5JFf4cv9K',
             'role_id' => '1',
+            'created_at' => '2021-01-29 22:29:01',
+            'updated_at' => '2021-01-29 22:29:01',
         ]);          
         DB::table('users')->insert([
         	'rfc' => 'VIRA9702024I0',
@@ -50,8 +52,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'vilchis@gmail.com',
             'password' => '$2y$10$EmsI4g.ZA6dbMYqiSCLDuezahaeiH7IxZ05uLZdLoo8D5JFf4cv9K',
             'role_id' => '2',
+            'created_at' => '2021-01-29 22:30:00',
+            'updated_at' => '2021-01-29 22:30:00',            
         ]);
-
 
 
         //PROCEDURES
@@ -78,6 +81,22 @@ class DatabaseSeeder extends Seeder
         DB::table('procedures')->insert([
             'description' => 'DUDAS O CLARACIONES GENERALES',
             'slug' => 'DUDAS O CLARACIONES GENERALES',         
-        ]);                     
+        ]); 
+
+
+        //CASHIER_STATUSES
+        DB::table('cashier_statuses')->insert([
+            'description' => 'ACTIVO',
+            'slug' => 'ACTIVO',
+        ]);  
+        DB::table('cashier_statuses')->insert([
+            'description' => 'INACTIVO',
+            'slug' => 'INACTIVO',
+        ]);  
+        DB::table('cashier_statuses')->insert([
+            'description' => 'OCUPADO',
+            'slug' => 'OCUPADO',
+        ]); 
+
     }
 }

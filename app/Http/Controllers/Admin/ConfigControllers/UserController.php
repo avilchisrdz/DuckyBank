@@ -64,7 +64,7 @@ class UserController extends Controller
 
     public function getUserEdit($id){
         //GetAllData
-            $usersCatch = User::orderBy('created_at','Desc')->get();
+            $usersCatch = User::orderBy('created_at','Asc')->get();
             $dataTwo = ['usersCatch' => $usersCatch];                  
         //
 

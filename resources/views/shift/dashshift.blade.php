@@ -39,8 +39,9 @@
 						</ul>
 						@endif
 						<script> 
-							$('.alert').slideDown(1000); 
-							window.setTimeout(function() { $(".alert").slideUp(1000); }, 5000);	
+							$('.alert').slideDown(800); 
+							window.setTimeout(function() { $(".alert").slideUp(80); }, 4000);	
+
 						</script>
 					</div>
 				</div>

@@ -15,7 +15,7 @@ class ProcedureController extends Controller
     	$this->middleware('isadmin');
     }
     public function getProcedures($id){
-    	$proceduresCatch = Procedure::orderBy('created_at','Desc')->get();
+    	$proceduresCatch = Procedure::orderBy('created_at','Asc')->get();
     	$data = ['proceduresCatch' => $proceduresCatch];
     	return view('admin.procedure.dashprocedure', $data);
     }
@@ -44,7 +44,7 @@ class ProcedureController extends Controller
 
     public function getProcedureEdit($id){
         //GetAllData
-            $proceduresCatch = Procedure::orderBy('created_at','Desc')->get();
+            $proceduresCatch = Procedure::orderBy('created_at','Asc')->get();
             $dataTwo = ['proceduresCatch' => $proceduresCatch];                  
         //
 

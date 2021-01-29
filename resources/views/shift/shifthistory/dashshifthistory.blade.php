@@ -1,10 +1,12 @@
 @extends('shift.master')
 
+@include('shift.reloadpage')
+
 @section('title','Solicitar Turno')
 
 @section('content')
 
-<div class="container-fluid">
+<div id="hist" class="container-fluid">
 		<div class="box card shadow">
 			<div class="header">
 				<a href="{{ url('/shiftshistories') }}">
@@ -13,12 +15,8 @@
 				</a>		
 			</div>
 			<div class="card-body">
-			<script type="text/javascript">
-				$(document)..ready(function() {
-			      	var refreshId =  setInterval( function(){ $('#clicking').load('dishshifthistory.blade.php'); }, 200 );
-				});		  
-			</script>				
-				<div id="clicking" class="inside">
+				
+				<div class="inside">
 					<nav class="nav nav-pills nav-fill">
 					</nav>
 					<div class="table-responsive">
@@ -43,5 +41,6 @@
 
 			</div>
 			<div class="card-footer">HISTORIAL DE TURNOS</div>
-		</div>	
+		</div>
+</div>	
 @stop

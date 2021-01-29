@@ -12,7 +12,7 @@ use Validator, Str;
 class ShiftController extends Controller
 {
     public function getShift(){
-    	$shiftsCatch = Shift::orderBy('created_at', 'Desc')->get();
+    	$shiftsCatch = Shift::orderBy('created_at', 'Asc')->get();
     	$data = ['shiftsCatch' => $shiftsCatch];
     	return view('shift.dashshift', $data);  
     }      
@@ -46,6 +46,7 @@ class ShiftController extends Controller
 
             if( $shift->save() ):
                 return redirect('/shiftsshow')->with('message', 'TURNO:'.$shift->description)->with('typealert','success');
+                
             endif; 
 
         endif;  
