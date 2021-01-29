@@ -8,7 +8,6 @@ use App\Http\Models\Procedure\Procedure;
 
 use Validator, Str;
 
-
 class ProcedureController extends Controller
 {
     public function __Construct(){

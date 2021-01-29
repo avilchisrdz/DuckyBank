@@ -40,7 +40,7 @@
 		  	<div class="input-group-prepend">
 		    	<div class="input-group-text"><i class="far fa-envelope-open"></i></div>
 		  </div>
-		  {!! Form::email('email', null, array('class ' => 'form-control text-inside', 'placeholder' => 'email@brazeway.com'))!!}
+		  {!! Form::email('email', null, array('class ' => 'form-control text-inside', 'placeholder' => 'email@duckybank.com'))!!}
 		</div>
 
 		<label for="password" class="font-weight-bold">Contraseña</label>

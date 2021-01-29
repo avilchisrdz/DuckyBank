@@ -26,7 +26,7 @@
 							{!! Form::text('description', $procedureCatch->description, array('class ' => 'form-control text-inside', 'placeholder' => 'Trámite')) !!}
 						</div>																						
 					{{ Form::submit('Guardar', [ 'class' => 'btn-success-btb border-all-10 mtop16' ]) }}					
-
+					{!! Form::close() !!}
 				</div>			
 			</div>
 			<div class="card-footer">FOOTER</div>

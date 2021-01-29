@@ -2,7 +2,7 @@
 
 @section('breadcrumb')
 	<li class="breadcrumb-item">
-	  <a href="{{ url('/admin/roles') }}"><i class="far fa-folder-open"></i> Editar roles</a>
+	  <a href="{{ url('/admin/cashiers') }}"><i class="far fa-folder-open"></i> Editar Cajeros</a>
 	</li>
 @endsection	
 
@@ -12,18 +12,18 @@
 <div class="row">
 	<section class="col-md-4 connectedSortable ui-sortable">
 		<div class="box card shadow footer-line">
-			<div class="card-header">Editar role</div>
+			<div class="card-header">Editar cajero</div>
 			<div class="card-body">
 				<div class="inside">
-					{!! Form::open(['url' => '/admin/role/'.$roleCatch->id.'/edit']) !!}				
-					<label for="description">Ingresa role:</label>
+					{!! Form::open(['url' => '/admin/cashier/'.$cashierCatch->id.'/edit']) !!}				
+					<label for="description">Ingresa cajero:</label>
 						<div class="input-group">
 						    <div class="input-group-prepend">
 							    <span class="input-group-text" id="basic-addon1">
 							    	<i class="far fa-keyboard"></i>
 							    </span>
 						    </div>
-							{!! Form::text('description', $roleCatch->description, array('class ' => 'form-control text-inside', 'placeholder' => 'Role')) !!}
+							{!! Form::text('description', $cashierCatch->description, array('class ' => 'form-control text-inside', 'placeholder' => 'Cajero')) !!}
 						</div>																						
 					{{ Form::submit('Guardar', [ 'class' => 'btn-success-btb border-all-10 mtop16' ]) }}					
 					{!! Form::close() !!}
@@ -31,13 +31,13 @@
 			</div>
 			<div class="card-footer">FOOTER</div>
 		</div>
-		<a class="shadow btn-success-btb border-all-10 d-flex" style="text-align: center;" href="/admin/roles/1">Agregar Role</a>
+		<a class="shadow btn-success-btb border-all-10 d-flex" style="text-align: center;" href="/admin/procedures/1">Agregar Trámite</a>
 	</section>
 	
 	<section class="col-md-8 connectedSortable ui-sortable">
 		<div class="box card shadow footer-line">
 			<div class="card-body">
-				<div class="shadow border-all-10" style="font-weight: bold; text-align: center; background-color: #4A96FF">Roles</div>
+				<div class="shadow border-all-10" style="font-weight: bold; text-align: center; background-color: #4A96FF">Trámites</div>
 				<div class="inside">
 					<nav class="nav nav-pills nav-fill">
 					</nav>
@@ -52,16 +52,16 @@
 								</tr>
 							</thead>
 							<tbody>
-								@foreach($rolesCatch as $role)
+								@foreach($cashiersCatch as $cashier)
 								<tr>
-									<td>{{ $role->id }}</td>
-									<td>{{ $role->description }}</td>
-									<td >{{ $role->created_at }}</td>
+									<td>{{ $cashier->id }}</td>
+									<td>{{ $cashier->description }}</td>
+									<td >{{ $cashier->created_at }}</td>
 									<td>
 										<div class="the-options">
-											<a href="{{ url('/admin/role/'.$role->id.'/edit') }}" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fas fa-edit"></i>
+											<a href="{{ url('/admin/cashier/'.$cashier->id.'/edit') }}" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fas fa-edit"></i>
 											</a>
-											<a href="{{ url('/admin/role/'.$role->id.'/delete') }}" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fas fa-trash-alt"></i>
+											<a href="{{ url('/admin/cashier/'.$cashier->id.'/delete') }}" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fas fa-trash-alt"></i>
 											</a>								
 										</div>
 									</td>

@@ -27,7 +27,7 @@
 							{!! Form::text('description', null, array('class ' => 'form-control text-inside', 'placeholder' => 'Trámite')) !!}
 						</div>																						
 					{{ Form::submit('Agregar', [ 'class' => 'btn-success-btb border-all-10 mtop16' ]) }}					
-
+					{!! Form::close() !!}
 				</div>			
 			</div>
 			<div class="card-footer">FOOTER</div>

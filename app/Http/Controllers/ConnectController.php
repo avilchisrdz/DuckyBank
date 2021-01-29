@@ -27,7 +27,7 @@ class ConnectController extends Controller
             'email.required' => 'Su e-mail es necesario.',
             'email.email' => 'El formato del e-mail no es válido.',
             'password.required' => 'Por favor, escriba su contraseña.',
-            'password.min' => 'La contraseña debe tener mínimo 3 caracteres.'
+            'password.min' => 'La contraseña debe tener mínimo 8 caracteres.'
         ];
 
         $validator = Validator::make($request->all(), $rules, $messages);
@@ -48,8 +48,8 @@ class ConnectController extends Controller
     		'name' => 'required',
     		'lastname' => 'required',
     		'email' => 'required|email|unique:users,email',
-    		'password' => 'required|min:3',
-    		'cpassword' => 'required|min:3|same:password'
+    		'password' => 'required|min:8',
+    		'cpassword' => 'required|min:8|same:password'
     	];
         $messages = [
             'rfc.required' => 'Ingresa rfc.',
@@ -59,9 +59,9 @@ class ConnectController extends Controller
             'email.email' => 'El formato del e-mail no es válido.',
             'email.unique' => 'Ya existe un usuario registrado con este e-mail.',
             'password.required' => 'Por favor, escriba su contraseña.',
-            'password.min' => 'La contraseña debe tener mínimo 3 caracteres.',
+            'password.min' => 'La contraseña debe tener mínimo 8 caracteres.',
             'cpassword.required' => 'Por favor, es necesario confirmar su contraseña.',
-            'cpassword.min' => 'Recuerde tener mínimo 3 caracteres.',
+            'cpassword.min' => 'Recuerde tener mínimo 8 caracteres.',
             'cpassword.same' => 'Por favor, verifique la exactitud de la contraseña.'
         ];
 
