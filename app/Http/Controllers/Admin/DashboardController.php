@@ -14,4 +14,7 @@ class DashboardController extends Controller
     public function getDashboard(){
     	return view('admin.dashboard');
     }
+    public function getCashierDashboard(){
+    	return view('cashieradmin.dashboard');
+    }    
 }

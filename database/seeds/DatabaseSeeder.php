@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        //AUTH
         DB::table('roles')->insert([
             'description' => 'ADMINISTRADOR',
             'slug' => 'ADMINISTRADOR',
@@ -49,6 +50,34 @@ class DatabaseSeeder extends Seeder
             'email' => 'vilchis@gmail.com',
             'password' => '$2y$10$EmsI4g.ZA6dbMYqiSCLDuezahaeiH7IxZ05uLZdLoo8D5JFf4cv9K',
             'role_id' => '2',
-        ]); 
+        ]);
+
+
+
+        //PROCEDURES
+        DB::table('procedures')->insert([
+            'description' => 'SOLICITAR NUEVA TARJETA DE CRÉDITO',
+            'slug' => 'SOLICITAR NUEVA TARJETA DE CRÉDITO',         
+        ]);
+        DB::table('procedures')->insert([
+            'description' => 'SOLICITAR NUEVA TARJETA DE DÉBITO',
+            'slug' => 'SOLICITAR NUEVA TARJETA DE DÉBITO',         
+        ]);         
+        DB::table('procedures')->insert([
+            'description' => 'HACER DEPOSITOS',
+            'slug' => 'HACER DEPOSITOS',         
+        ]);      
+        DB::table('procedures')->insert([
+            'description' => 'HACER RETIROS',
+            'slug' => 'HACER RETIROS',         
+        ]);    
+        DB::table('procedures')->insert([
+            'description' => 'ASESORÍA ESPECIAL/EJECUTIVO',
+            'slug' => 'ASESORÍA ESPECIAL/EJECUTIVO',         
+        ]);     
+        DB::table('procedures')->insert([
+            'description' => 'DUDAS O CLARACIONES GENERALES',
+            'slug' => 'DUDAS O CLARACIONES GENERALES',         
+        ]);                     
     }
 }

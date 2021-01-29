@@ -15,13 +15,12 @@ class IsAdmin
      */
     public function handle($request, Closure $next)
     {
-        if( Auth::user()->role_id == '1' ):
-            return $next($request);
+        if( Auth::user()->role_id == '1' || Auth::user()->role_id == '2' ):
+            return $next($request);         
         else:
             return redirect('/shifts');
         endif;
     }
 }
 
-//        else if( Auth::user()->role == '2'):
-//            return $next($request);
+

@@ -35,11 +35,15 @@ class ConnectController extends Controller
             return back()->withErrors($validator)->with('message', 'Error de inicio de sesión. Por favor verifique lo siguiente: ')->with('typealert','danger');
         else:
 
-            if( Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')], true) ):
+            if( Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password'), 'role_id' => '1' ], true) ){
                 return redirect('/admin');
-            else:
-                return back()->with('message', 'E-mail o contraseña incorrecta.')->with('typealert','danger');
-            endif;  
+            }
+            else if( Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password'), 'role_id' => '2' ], true)  ){
+                return redirect('/cashieradmin');
+            } 
+            else{
+                return back()->with('message', 'E-mail o contraseña incorrecta.')->with('typealert','danger');                
+            }
         endif; 
     }     
     public function postRegister(Request $request){

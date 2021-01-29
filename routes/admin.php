@@ -2,7 +2,6 @@
 
 Route::prefix('/admin')->group( function(){
 	Route::get('/', 'Admin\DashboardController@getDashboard')->name('dashboard');
-
 	//Procedures
 	Route::get('/procedures/{id}', 'Admin\ProcedureControllers\ProcedureController@getProcedures')->name('procedure');
 	Route::post('/procedure/add', 'Admin\ProcedureControllers\ProcedureController@postProcedureAdd')->name('procedure');
@@ -46,4 +45,8 @@ Route::prefix('/admin')->group( function(){
 	Route::post('/cashierstatus/{id}/edit', 'Admin\CashierControllers\CashierStatusController@postCashierStatusEdit')->name('cashierstatus');
 	Route::get('/cashierstatus/{id}/delete', 'Admin\CashierControllers\CashierStatusController@getCashierStatusDelete')->name('cashierstatus');		
 
+});
+
+Route::prefix('/cashieradmin')->group( function(){
+	Route::get('/', 'Admin\DashboardController@getCashierDashboard')->name('dashboard');	
 });
