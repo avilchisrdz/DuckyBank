@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Validator, Hash, Auth;
-use App\User;
+use App\Http\Models\User\User;
 
 class ConnectController extends Controller
 { 
