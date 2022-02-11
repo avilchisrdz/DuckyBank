@@ -46,6 +46,13 @@
 					  </div>
 					  {!! Form::email('email', $userCatch->email, array('class ' => 'form-control text-inside', 'placeholder' => 'email@duckybank.com'))!!}
 					</div>
+					<label for="role_id" class="font-weight-bold">Role</label>
+					<div class="input-group">
+					  	<div class="input-group-prepend">
+					    	<div class="input-group-text"><i class="fas fa-user"></i></div>
+					  </div>
+					  {!! Form::select('role_id',getArrayRoles(),0,array('class' => 'custom-select text-inside')) !!}	
+					</div>											
 
 					<label for="password" class="font-weight-bold">Contraseña</label>
 					<div class="input-group">

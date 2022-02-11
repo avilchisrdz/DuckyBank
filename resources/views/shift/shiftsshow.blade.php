@@ -12,7 +12,7 @@
 		</a>
 	</div>
 	<div class="inside">
-		<div class="box shadow">
+		<div class="box shadow shiftshow">
 			<h1>SU TURNO ES:</h1>
 			@if(Session::has('message'))
 				<div class="container mtop16">
@@ -25,11 +25,6 @@
 							@endforeach
 						</ul>
 						@endif
-						<script> 
-							$('.alert').slideDown(1000); 
-							window.setTimeout(function() { $(".alert").slideUp(1000); }, 8000);	
-							window.setTimeout(function(){ window.location.href = "/shifts"; },10000);
-						</script>
 					</div>
 				</div>
 			@endif			
@@ -38,8 +33,15 @@
 	</div>
 	<div class="footer" style="font-weight: bold; font-size: 0.85rem;">
 		Tiempo aproximado de espera >[1 minuto].
-	</div>
-	
+	</div>	
 </div>
+
+<script> 
+	$('.alert').slideDown(1000); 
+	setTimeout(function() { 
+		$(".alert").slideUp(1000);
+		window.location.href = "/shifts";
+	}, 7000);	
+</script>
 
 @stop

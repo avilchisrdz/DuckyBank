@@ -1,7 +1,5 @@
 @extends('shift.master')
 
-@include('shift.reloadpage')
-
 @section('title','Solicitar Turno')
 
 @section('content')
@@ -27,7 +25,7 @@
 									<td class="table-titles" style="font-size: 2rem; text-align: center;" >Fecha</td>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody id="id_shifthistories">
 								@foreach($shiftHistoriesCatch as $shifthistory)
 								<tr>
 									<td class="shadow" style="font-size: 1.9rem; font-weight: bold; text-align: center;">{{ $shifthistory->description }}</td>
@@ -42,5 +40,39 @@
 			</div>
 			<div class="card-footer">HISTORIAL DE TURNOS</div>
 		</div>
-</div>	
+</div>
+<script>
+
+var shiftSizeOld=0;
+	
+setInterval(function(){
+
+	$.ajax({
+		type: "GET",
+		url: 'consult_shifts',
+		data: "1",
+		cache: false,
+		success: function (info) {
+
+			var data = JSON.parse(info);
+
+			if(shiftSizeOld != data.shiftSize){
+				if (data.shiftSize > 0) {
+					document.getElementById("id_shifthistories").innerHTML = data.shiftHistoriesCatch;
+				}
+				shiftSizeOld=data.shiftSize;				
+			}
+
+		},
+		error: function (XMLHttpRequest, textStatus, errorThrown) {
+			//console.log(arguments);
+		},
+	});	
+
+},1000);
+
+
+
+
+</script>	
 @stop

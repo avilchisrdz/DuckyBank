@@ -1,6 +1,7 @@
 <?php
 
 Route::prefix('/admin')->group( function(){
+	
 	Route::get('/', 'Admin\DashboardController@getDashboard')->name('dashboard');
 	//Procedures
 	Route::get('/procedures/{id}', 'Admin\ProcedureControllers\ProcedureController@getProcedures')->name('procedure');
@@ -50,3 +51,10 @@ Route::prefix('/admin')->group( function(){
 Route::prefix('/cashieradmin')->group( function(){
 	Route::get('/', 'Admin\DashboardController@getCashierDashboard')->name('dashboard');	
 });
+
+Route::redirect('admin/procedures', '/admin/procedures/1');
+Route::redirect('admin/roles', '/admin/roles/1');
+Route::redirect('admin/userstatuses', '/admin/userstatuses/1');
+Route::redirect('admin/users', '/admin/users/1');
+Route::redirect('admin/cashiers', '/admin/cashiers/1');
+Route::redirect('admin/cashierstatuses', '/admin/cashierstatuses/1');

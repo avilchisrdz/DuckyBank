@@ -26,6 +26,7 @@ class UserController extends Controller
     		'name' => 'required',
     		'lastname' => 'required',
     		'email' => 'required|email|unique:users,email',
+            'role_id' => 'required',
     		'password' => 'required|min:8',
     		'cpassword' => 'required|min:8|same:password'
     	];
@@ -36,6 +37,7 @@ class UserController extends Controller
             'email.required' => 'Su e-mail es necesario.',
             'email.email' => 'El formato del e-mail no es válido.',
             'email.unique' => 'Ya existe un usuario registrado con este e-mail.',
+            'role_id' => 'Se requiere el rol a desempeñar.',
             'password.required' => 'Por favor, escriba su contraseña.',
             'password.min' => 'La contraseña debe tener mínimo 8 caracteres.',
             'cpassword.required' => 'Por favor, es necesario confirmar su contraseña.',
@@ -52,6 +54,7 @@ class UserController extends Controller
             $user->rfc = e($request->input('rfc'));
             $user->name = e($request->input('name'));
             $user->lastname = e($request->input('lastname'));
+            $user->role_id = $request->input('role_id');
             $user->email = e($request->input('email'));
             $user->password = Hash::make($request->input('password'));
 
@@ -74,18 +77,20 @@ class UserController extends Controller
     }   
 
     public function postUserEdit(Request $request, $id){
-    	$rules = [
-    		'rfc' => 'required',
-    		'name' => 'required',
-    		'lastname' => 'required',
-    		'email' => 'required|email|unique:users,email',
-    		'password' => 'required|min:8',
-    		'cpassword' => 'required|min:8|same:password'
-    	];
+        $rules = [
+            'rfc' => 'required',
+            'name' => 'required',
+            'lastname' => 'required',
+            'email' => 'required|email|unique:users,email',
+            'role_id' => 'required',
+            'password' => 'required|min:8',
+            'cpassword' => 'required|min:8|same:password'
+        ];
         $messages = [
             'rfc.required' => 'Ingresa rfc.',
             'name.required' => 'Su nombre es necesario.',
             'lastname.required' => 'Su apellido es necesario.',
+            'role_id' => 'Se requiere el rol a desempeñar.',
             'email.required' => 'Su e-mail es necesario.',
             'email.email' => 'El formato del e-mail no es válido.',
             'email.unique' => 'Ya existe un usuario registrado con este e-mail.',
@@ -105,6 +110,7 @@ class UserController extends Controller
             $user->rfc = e($request->input('rfc'));
             $user->name = e($request->input('name'));
             $user->lastname = e($request->input('lastname'));
+            $user->role_id = $request->input('role_id');
             $user->email = e($request->input('email'));
             $user->password = Hash::make($request->input('password'));
 

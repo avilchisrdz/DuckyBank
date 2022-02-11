@@ -40,11 +40,11 @@
             <i class="fas fa-circle"></i> Online
           </a>          
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item nav-ddown-item">
+          <a href="/admin/user/{{ Auth::user()->id }}/edit" class="dropdown-item nav-ddown-item">
             <i class="fas fa-cogs"></i> Configuración
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item nav-ddown-item">
+          <a href="/admin/user/1" class="dropdown-item nav-ddown-item">
             <i class="fas fa-users mr-2"></i> Administración
           </a>
           <div class="dropdown-divider"></div>

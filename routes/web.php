@@ -14,6 +14,8 @@ Route::get('/shiftsshow', function () {
 
 //ShiftsHistories
 Route::get('/shiftshistories', 'ShiftControllers\ShiftHistoryController@getShiftHistories')->name('shifthistory');	
+Route::get('/consult_shifts', 'ShiftControllers\ShiftHistoryController@getShifts')->name('consult_shifts');	
+
 
 Route::get('/recover', function () {
     return view('recover.recover');
@@ -21,6 +23,9 @@ Route::get('/recover', function () {
 Route::get('/', function () {
     return view('connect.login');
 });
+
+
+
 
 Route::get('/login', 'ConnectController@getLogin')->name('login'); 
 Route::post('/login', 'ConnectController@postLogin')->name('login'); 

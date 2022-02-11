@@ -105,6 +105,87 @@
               </li>             
             </ul>
           </li>
+          
+{{--            <li class="nav-item has-treeview">
+            <a href="#" class="nav-link active s-item-menu">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>Dashboard<i class="right fas fa-angle-left"></i></p>
+            </a>   
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ url('/admin') }}" class="nav-link s-item-submenu text-transform-x icon-item-submenu">
+                  <i class="fas fa-home"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>             
+            </ul>
+          </li>
+          
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link active s-item-menu">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>Trámites<i class="right fas fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ url('/admin/procedures/1') }}" class="nav-link s-item-submenu text-transform-x">
+                  <i class="fas fa-file-alt"></i>
+                  <p>Trámites</p>
+                </a>
+              </li>             
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link active s-item-menu">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>Cajeros<i class="right fas fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ url('/admin/cashiers/1') }}" class="nav-link s-item-submenu text-transform-x">
+                  <i class="fas fa-user-friends"></i>
+                  <p>Cajeros</p>
+                </a>
+              </li>             
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ url('/admin/cashierstatuses/1') }}" class="nav-link s-item-submenu text-transform-x">
+                  <i class="fas fa-user-friends"></i>
+                  <p>Estados de Cajeros</p>
+                </a>
+              </li>             
+            </ul>            
+          </li>          
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link active s-item-menu">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>Configuraciones<i class="right fas fa-angle-left"></i></p>
+            </a>
+
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ url('/admin/users/1') }}" class="nav-link s-item-submenu text-transform-x">
+                  <i class="fas fa-user-friends"></i>
+                  <p>Usuarios</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('/admin/userstatuses/1') }}" class="nav-link s-item-submenu text-transform-x">
+                  <i class="fas fa-user-friends"></i>
+                  <p>Estado de Usuarios</p>
+                </a>
+              </li>              
+              <li class="nav-item">
+                <a href="{{ url('/admin/roles/1') }}" class="nav-link s-item-submenu text-transform-x">
+                  <i class="fas fa-network-wired"></i>
+                  <p>Roles</p>
+                </a>
+              </li>             
+            </ul>
+          </li>    --}}        
 
           <!-- SOMETHING TO HELP FILE-->
         </ul>       

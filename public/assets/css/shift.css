@@ -39,6 +39,7 @@ body img {
     border: 1px solid #d6d6d6;
     width: 100%;
     height: 100%;
+    padding: 10px;
 }
 .box .box-shift .header {
     background-color: #00547D;
@@ -55,18 +56,24 @@ body img {
     padding: 3%;
     text-align: center;
 }
+.shiftshow{
+    padding-bottom: 20px;    
+}
+
 .box .header {
     background-color: #00547D;
     border-radius: 8px 8px 8px 8px;
-    padding: 18px;
+    padding: 8px;
 }
 .box .header a img {
     display: block;
     margin: 0px auto;
-    width: 30%;
+    width: 90px;
+    height: 70px;
 }
 .box .footer {
     text-align: center; 
+    padding: 3%;
 }
 .box .footer a {
     display: inline-block;

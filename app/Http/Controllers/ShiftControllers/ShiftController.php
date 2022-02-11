@@ -40,7 +40,6 @@ class ShiftController extends Controller
 
         	$shift = new Shift;
         	$shift->description = e($letra.$numero);
-        	//e($request->input('description'));
         	$shift->slug = Str::slug($letra.$numero);
         	$shift->procedure_id = $request->input('selectshift');
 
@@ -51,6 +50,4 @@ class ShiftController extends Controller
 
         endif;  
     }
-
-
 }
